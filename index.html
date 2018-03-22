@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>FIFA World Cup - Constellation of players</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="scatter.css" charset="utf-8">
+</head>
+<div class="container">
+  <div id="frame" class="row text-center">
+    <div id="menu" class="col-sm">
+
+      <p>The following visualizations show the players of each of the countries that will be playing the FIFA World Cup
+        Russia 2018.</p>
+      <p>The players are organized as if they form a constellation of stars, by using dimensionality reduction called
+        <a href="https://en.wikipedia.org/wiki/Principal_component_analysis">Princial Component Analysis (PCA)</a>.
+        With these technique I could represent more than 30 skills of the players (for example, acceleration, ball control, dribbling, speed, etc.)
+        into a 2-D plane.  The main goal of PCA is to reduce the dimensionality, while retaining the variation present in the dataset, up to the maximum extent.
+      </p>
+      <p>Hence, having one player as a reference, for example Messi, we would say that players close to him are also good players, while
+        players who are far from them may not be as good.
+      </p>
+
+      <p>Click in the links to see the visualizations for each position:
+      </p>
+
+      <a class="btn btn-primary constellation-link" href="goalkeepers.html">Constellation of Goalkeepers</a><br/>
+      <a class="btn btn-primary constellation-link" href="defenders.html">Constellation of Defenders</a><br/>
+      <a class="btn btn-primary constellation-link" href="fullbacks.html">Constellation of Fullbacks</a><br/>
+      <a class="btn btn-primary constellation-link" href="midfielders.html">Constellation of Midfielders</a><br/>
+      <a class="btn btn-primary constellation-link" href="attackers.html">Constellation of Attackers</a><br/>
+    </div>
+  </div>
+  <div id="title-bar" class="row">
+    <div class="col-sm-10">Constellation of players</div>
+    <div class="col-sm-2">
+      <img src="img/russia2018.png" />
+    </div>
+  </div>
+
+
+</div>
+</body>
+
+</html>

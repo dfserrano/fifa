@@ -1,0 +1,124 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>FIFA World Cup - Constellation of attackers</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="scatter.css" charset="utf-8">
+</head>
+<div class="container">
+  <div id="frame" class="row text-center">
+    <div id="scatter" class="col-sm"></div>
+  </div>
+  <div id="title-bar" class="row">
+    <div class="col-sm-10">Constellation of attackers</div>
+    <div class="col-sm-2">
+      <img src="img/russia2018.png" />
+    </div>
+  </div>
+
+  <div class="data-sheet">
+    <h3>Data Sheet</h3>
+    <table class="table table-bordered">
+      <tbody>
+          <tr>
+              <td scope="col">
+                <strong>Description</strong>
+              </td>
+              <td scope="col">
+                <p>The visualization shows the attacking players of each of the countries that will be playing the FIFA World Cup
+                  Russia 2018.</p>
+                <p>The players are organized as if they form a constellation of stars, by using dimensionality reduction called
+                  <a href="https://en.wikipedia.org/wiki/Principal_component_analysis">Princial Component Analysis (PCA)</a>.
+                  With these technique I could represent more than 30 skills of the players (for example, acceleration, ball control, dribbling, speed, etc.)
+                  into a 2-D plane.  The main goal of PCA is to reduce the dimensionality, while retaining the variation present in the dataset, up to the maximum extent.
+                </p>
+                <p>Hence, having Lionel Messi and Cristiano Ronaldo as a reference (top-right), we would say that players close to them are also good attackers, while
+                  attackers who are far from them may not be as good.  Then, we can see that Argentina has probably the best attackers, but Colombia (my country) is not so bad as well.
+                </p>
+              </td>
+            </tr>
+        <tr>
+          <td scope="col">
+            <strong>Instructions</strong>
+          </td>
+          <td scope="col">
+            <p>Users can zoom in/out by using the mouse wheel, and move the constellation by dragging and dropping the background.
+            </p>
+            <p>When users hover one of the flags, the player information is shown, and when the mouse moves out of the flag,
+              the player information card disappears.</p>
+          </td>
+        </tr>
+        <tr>
+          <td scope="col">
+            <strong>Data Sources</strong>
+          </td>
+          <td scope="col">
+            <p>
+              The data is provided by
+              <a href="https://www.kaggle.com/thec03u5/fifa-18-demo-player-dataset">Aman Shrivastava</a>, who extracted the data from
+              <a href="https://sofifa.com">sofifa.com</a> (FIFA18) and is made available in Kaggle.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td scope="col">
+            <strong>Methodology</strong>
+          </td>
+          <td scope="col">
+            <p>From the dataset, I selected the top-4 players, based on the overall score, for each country participating in
+              the World Cup.</p>
+            <p>Only the players that contain any of the following positions were considered: LW (left winger), RW (right winger),
+              ST (striker), CF (center forwards).</p>
+            <p>Then, all the attributes that are not part of the profile information, such as strength and stamina, are standardized
+              and fed into the PCA algorithm.</p>
+            <p>Subsequently, the positions are adjusted in order to have top players at the top-right area of the screen, which
+              is more intuitive for final users.</p>
+            <p>More details can be deduced from the source code.</p>
+          </td>
+        </tr>
+        <tr>
+          <td scope="col">
+            <strong>Source Code</strong>
+          </td>
+          <td scope="col">
+            <a href="https://github.com/dfserrano/fifa">https://github.com/dfserrano/fifa</a>
+          </td>
+        </tr>
+        <tr>
+          <td scope="col">
+            <strong>Notes</strong>
+          </td>
+          <td scope="col">
+            <p>The visualization was adapted from Jonas Peterson's example at
+              <a href="http://bl.ocks.org/peterssonjonas/4a0e7cb8d23231243e0e">bl.ocks.org</a>.</p>
+            <p>The logo for the FIFA World Cup Russia 2018 was used without consent of FIFA, this application has no affiliation
+              with FIFA or Electronic Arts, and the logo is used only for aesthetics purposes.</p>
+          </td>
+        </tr>
+        <tr>
+          <td scope="col">
+            <strong>Contact</strong>
+          </td>
+          <td scope="col">
+            <p>
+              <a href="dfserrano@gmail.com">dfserrano@gmail.com</a>
+            </p>
+            <p>
+              <a href="serranos@ualberta.ca">serranos@ualberta.ca</a>
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.js" charset="utf-8"></script>
+<script>
+  dataPath = "data/attackers.json";
+</script>
+<script src="scatter.js" charset="utf-8"></script>
+</body>
+
+</html>
