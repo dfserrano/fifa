@@ -6,7 +6,7 @@ The players are organized as if they form a constellation of stars, by using dim
 Hence, having one player as a reference, for example Messi, we would say that players close to him are also good players, while players who are far from them may not be as good.
 
 You can take a look at this link, which also contain more details about the methodology for each visualization:
-[webdocs.cs.ualberta.ca/~serranos/fifa.html](webdocs.cs.ualberta.ca/~serranos/fifa.html)
+[webdocs.cs.ualberta.ca/~serranos/fifa.html](http://webdocs.cs.ualberta.ca/~serranos/fifa.html)
 
 Information about players is preprocessed with the python script **players_pca.py**, which generates the files used by the webpages and located in the **data/** folder.
 
